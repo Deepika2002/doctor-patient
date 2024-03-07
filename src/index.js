@@ -11,9 +11,11 @@ app.use(express.json());
 app.set("view engine", "hbs");
 app.set("views", templatePath);
 app.use(express.urlencoded({ extended: false }));
+require('dotenv').config();
+
 
 // Connect to MongoDB using Mongoose
-mongoose.connect("mongodb+srv://Deepika:Deepika.2002@doctorpatientmanagement.x9wcoci.mongodb.net/DoctorPatientManagement", {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {

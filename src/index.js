@@ -15,7 +15,7 @@ require('dotenv').config();
 
 
 // Connect to MongoDB using Mongoose
-mongoose.connect(process.env.MONGODB_URL, {
+mongoose.connect("mongodb+srv://Deepika:Deepika.2002@doctorpatientmanagement.x9wcoci.mongodb.net/DoctorPatientManagement", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
